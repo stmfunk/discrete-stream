@@ -1,12 +1,25 @@
 {
   "name": "discrete-stream",
   "version": "1.0.0",
-  "description": "",
+  "description": "A basic syncing web streaming site",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stmfunk/discrete-stream.git"
+  },
   "scripts": {
-    "dev": "nodemon ./index.js"
+    "dev": "nodemon ./index.js", 
+    "ui": "browser-sync start --proxy=localhost:8080 --files='**/*.css, **/*.pug, **/*,js' --ignore=node_modules --reload-delay 10 --no-ui --no-notify"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.10",
+    "nodemon": "^2.0.4"
+  }
 }
