@@ -3,14 +3,5 @@ extends layout
 block layout-content
   div.View
       h1.Banner WHATABYTE
-      div.Video
-          video(controls, width="100%")
-              source(src="http://localhost:8080/video", type="video/mp4")
-      div.Message
-          div.Title
-              h3 Making the Best
-              h1 Food For Devs
-          span.Details Access the WHATABYTE Team Portal
-      div.NavButtons
-          a(href="/user")
-              div.NavButton Just dive in!
+      video(controls, width="100%", id="MainVideo").Video
+          source(src="http://localhost:8080/video", type="video/mp4")
