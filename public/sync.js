@@ -1,3 +1,7 @@
 $(document).ready(function() {
-    $('video')[0].onplay = function() { console.log("playing")};
+    var fish = 0;
+    $('video')[0].onplay = function() { 
+      fish++;
+      $.post('http://localhost:8080/', '${fish}');
+    };
 });

@@ -7,6 +7,7 @@ const express = require("express");
 const path = require("path");
 const router = express.Router();
 const fs = require('fs');
+var count = 1;
 
 /**
 * App Variables
@@ -28,6 +29,11 @@ app.use(express.static(path.join(__dirname, "public")));
 */
 app.get("/", (req, res) => {
   res.render("index", { title: "Home"});
+});
+
+app.post("/", (req, res) => {
+  console.log("cat");
+  res.sendStatus(200);
 });
 
 app.get('/video', (req, res) => {
