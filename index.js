@@ -85,7 +85,7 @@ app.get('/playback', (req,res) =>  {
 });
 
 app.get('/video', (req, res) => {
-  const vpath = 'public/assets/samplevideo.mp4';
+  const vpath = 'public/assets/thirst.mp4';
 
   fs.stat(vpath, (err, stat) => {
 
