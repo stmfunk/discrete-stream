@@ -35,9 +35,7 @@ const io = require('socket.io')(server);
 io.on('connection', (socket) => {
   socket.on('videoState', (state) => {
     connections[socket.id] = state;
-    console.log('videoState: ' + String(connections[socket.id].currentTime));
     socket.broadcast.emit('stateChange', state);
-    console.log("end");
   });
 });
 
