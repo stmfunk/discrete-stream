@@ -148,3 +148,7 @@ a {
   border-bottom: var(--ui-shawdow-border);
   box-shadow: var(--ui-shawdow);
 }
+::cue {
+  font-size: 0.8em;
+  background: red;
+}
