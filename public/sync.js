@@ -10,10 +10,8 @@ $(document).ready(function() {
     };
 
     const updateState = function(state) {
-      console.log(state);
       mainVid.currentTime = Math.floor(state.currentTime);
       state.playing ? mainVid.play() : mainVid.pause();
-      console.log('connection');
       justUpdate = true;
     }
 
@@ -25,7 +23,7 @@ $(document).ready(function() {
 
       if (!justUpdate) {
         socket.emit('videoState', videoState);
-	justUpdate = false;
+        justUpdate = false;
       }
     };
 
