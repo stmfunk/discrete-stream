@@ -82,6 +82,16 @@ a {
   font-family: var(--core-font);
 }
 
+.Video {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  height: 80%;
+  width: 100%;
+}
+
 .Banner {
   display: flex;
   flex-direction: column;

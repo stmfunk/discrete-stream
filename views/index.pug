@@ -3,6 +3,6 @@ extends layout
 block layout-content
   div.View
       h1.Banner WHATABYTE
-      video(controls, width="100%", id="MainVideo").Video
+      video(controls, id="my-video", data-setup='{"autoplay":false}').Video.video-js.vjs-theme-forest
           source(src="/video", type="video/mp4")
           track(label="English" kind="subtitles" srclang="en" src="/assets/thirstSubEng.vtt" default)
